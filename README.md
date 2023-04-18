@@ -5,21 +5,12 @@ Install Latest Sonatype Nexus 3 on Ubuntu 22 using ansible \
 
 ---
 
-## Prerequisites
-* Ansible master node
-  * Install python3 `sudo yum install python3`
-  * Install git `sudo yum install git`
-  * Install ansible `sudo yum install ansible`
-  * Set Passwordless authentication between master and hosts (nexus machine) `ssh-keygen` , `ssh-copy-id ansible@IP_address`
-  * Add inventory file 
-    ```
-    [hosts]
-    nexus ansible_host=remote_host_IP
-    ```
-* Nexus node
-  * Minimum 1 VCPU & 2 GB Memory
-  * Install OpenJDK 8
-  
+## Sonatype Nexus System Requirements
+* Minimum 1 VCPU & 2 GB Memory
+* Server firewall opened for port 22 & 8081
+* OpenJDK 8
+* All Nexus processes should run as a non-root nexus user.
+
  ---
  
  ## Steps
