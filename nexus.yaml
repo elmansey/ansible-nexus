@@ -1,0 +1,4 @@
+- name: install nexus in ubuntu server  
+  hosts: nexus_server
+  roles:
+  - nexus
